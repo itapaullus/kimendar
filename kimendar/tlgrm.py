@@ -7,8 +7,10 @@ dispatcher = updater.dispatcher
 # Обработка команд
 def startCommand(bot, update):
     bot.send_message(chat_id=update.message.chat_id, text='Hello Dear, lets talk')
+    print('Start Command')
 def textMessage(bot, update):
     response = 'Ok sweetty: ' + update.message.text
+    print('inmessage: ' + update.message.text)
     bot.send_message(chat_id=update.message.chat_id, text=response)
 # Хендлеры
 start_command_handler = CommandHandler('start', startCommand)
