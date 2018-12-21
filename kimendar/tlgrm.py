@@ -4,7 +4,7 @@ import telegram
 import tlg_redmine
 import os
 
-bot_token = '609669102:AAGMn3pOwmObgAYdhe4jthhvpEjny91X5nA' # os.environ.get('TOKEN_TLG')
+bot_token = os.environ.get('TOKEN_TLG')
 updater = Updater(token=bot_token) # Токен API к Telegram
 dispatcher = updater.dispatcher
 # Обработка команд
