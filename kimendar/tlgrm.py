@@ -1,9 +1,10 @@
 # Настройки
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import telegram
-from kimendar import redmine
+import tlg_redmine
 import os
-bot_token = os.environ.get('TOKEN_TLG')
+
+bot_token = '609669102:AAGMn3pOwmObgAYdhe4jthhvpEjny91X5nA' # os.environ.get('TOKEN_TLG')
 updater = Updater(token=bot_token) # Токен API к Telegram
 dispatcher = updater.dispatcher
 # Обработка команд
@@ -15,7 +16,7 @@ def startCommand(bot, update):
 def testCommand(bot, update):
     try:
         bot.send_message(chat_id=update.message.chat_id,
-                         text=redmine.get_support_info(),
+                         text=tlg_redmine.get_support_info(),
                          parse_mode=telegram.ParseMode.HTML)
     except Exception as e:
         print(e)
