@@ -1,1 +1,1 @@
-init: python kimendar/tlgrm.py
+init: nohup python kimendar/tlgrm.py&
