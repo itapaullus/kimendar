@@ -23,7 +23,7 @@ def testCommand(bot, update):
     print('Test Command')
 
 def textMessage(bot, update):
-    response = 'Ok sweetty: ' + update.message.text
+    response = 'Ok sweety: ' + update.message.text
     print('inmessage: ' + update.message.text)
     bot.send_message(chat_id=update.message.chat_id, text=response)
 # Хендлеры команд
